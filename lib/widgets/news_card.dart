@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_news_app/models/news_model.dart';
 import 'package:flutter_news_app/screens/news_details.dart';
 import 'package:flutter_news_app/widgets/lazy_load_image.dart';
 
 class NewsCardWidget extends StatelessWidget {
-  final Map? newsData;
+  final NewsModel? newsData;
   const NewsCardWidget({super.key, required this.newsData});
 
   @override
@@ -40,8 +41,7 @@ class NewsCardWidget extends StatelessWidget {
             child: Stack(
               alignment: Alignment.bottomCenter,
               children: [
-                LazyLoadImage(
-                    url: "${newsData!['urlToImage']}", errorSize: 600),
+                LazyLoadImage(url: "${newsData!.urlToImage}", errorSize: 600),
                 Container(
                   padding: const EdgeInsets.fromLTRB(16, 10, 16, 10),
                   decoration: BoxDecoration(
@@ -58,7 +58,7 @@ class NewsCardWidget extends StatelessWidget {
                   height: 60,
                   alignment: Alignment.bottomCenter,
                   child: Text(
-                    "${newsData!['title']}",
+                    "${newsData!.title}",
                     textAlign: TextAlign.center,
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,

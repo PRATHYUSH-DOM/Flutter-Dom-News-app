@@ -1,4 +1,8 @@
+import 'dart:convert';
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
+import 'package:flutter_news_app/models/news_model.dart';
 import 'package:flutter_news_app/providers/api_provider.dart';
 import 'package:flutter_news_app/widgets/news_card_skelton.dart';
 import 'package:flutter_news_app/widgets/menu_drawer.dart';
@@ -15,8 +19,8 @@ class NewsListScreen extends StatefulWidget {
 
 class _NewsListScreenState extends State<NewsListScreen> {
   bool isLoading = true;
-  List newsList = [];
-
+  List<NewsModel> newsList = <NewsModel>[];
+  NewsModel? ab;
   @override
   void initState() {
     getNewsList();
@@ -28,7 +32,9 @@ class _NewsListScreenState extends State<NewsListScreen> {
         await Provider.of<ApiProvider>(context, listen: false).getNewsList();
     if ((temp)['status'] == 'ok') {
       setState(() {
-        newsList = temp['articles'];
+        newsList = (temp['articles'] as List)
+            .map((e) => NewsModel.fromJson(e))
+            .toList();
         isLoading = false;
       });
     }
@@ -64,7 +70,7 @@ class _NewsListScreenState extends State<NewsListScreen> {
         body: !isLoading
             ? SingleChildScrollView(
                 child: Column(children: [
-                  for (var a in newsList)
+                  for (var a in newsList!)
                     NewsCardWidget(
                       newsData: a,
                     ),

@@ -1,15 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_news_app/models/news_model.dart';
 import 'package:flutter_news_app/providers/api_provider.dart';
 import 'package:flutter_news_app/widgets/lazy_load_image.dart';
-import 'package:flutter_news_app/widgets/news_card_skelton.dart';
-import 'package:flutter_news_app/widgets/menu_drawer.dart';
-import 'package:flutter_news_app/widgets/news_card.dart';
 import 'package:flutter_news_app/widgets/news_detail_skelton.dart';
-import 'package:flutter_news_app/widgets/notification_button.dart';
 import 'package:provider/provider.dart';
 
 class NewsDetailsScreen extends StatefulWidget {
-  final Map newsData;
+  final NewsModel newsData;
   const NewsDetailsScreen({super.key, required this.newsData});
 
   @override
@@ -74,7 +71,7 @@ class _NewsDetailsScreenState extends State<NewsDetailsScreen> {
                           alignment: Alignment.bottomCenter,
                           children: [
                             LazyLoadImage(
-                                url: "${widget.newsData['urlToImage']}",
+                                url: "${widget.newsData.urlToImage}",
                                 errorSize: 600),
                           ],
                         ),
@@ -82,7 +79,7 @@ class _NewsDetailsScreenState extends State<NewsDetailsScreen> {
                       Container(
                         padding: const EdgeInsets.fromLTRB(16, 10, 16, 10),
                         child: Text(
-                          "${widget.newsData['title']}",
+                          "${widget.newsData.title}",
                           style: const TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.w800,
@@ -93,7 +90,7 @@ class _NewsDetailsScreenState extends State<NewsDetailsScreen> {
                       Container(
                         padding: const EdgeInsets.symmetric(horizontal: 16),
                         child: Text(
-                          "${widget.newsData['description']}",
+                          "${widget.newsData.description}",
                           style: const TextStyle(
                             fontSize: 14,
                             fontWeight: FontWeight.w800,
