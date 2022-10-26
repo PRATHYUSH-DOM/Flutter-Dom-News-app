@@ -1,16 +1,37 @@
-# flutter_news_app
 
-A new Flutter project.
+# Flutter Dom News App
 
-## Getting Started
+Flutter news application created from scratch, Project includes - Lazy loading images, Menu Drawer, Provider, Skelton loading,
 
-This project is a starting point for a Flutter application.
+## Features
 
-A few resources to get you started if this is your first Flutter project:
+Lazy loading images
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Menu Drawer
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Skelton loading
+
+Provider
+
+API call from free news api [News API](https://newsapi.org/)
+
+
+
+
+
+## Screenshots
+
+| Name     | Character |
+| ---      | ---       |
+| ![App Screenshot](https://github.com/prathyushp1/Flutter-Dom-News-app/blob/main/screenshots/Simulator%20Screen%20Shot%20-%20iPhone%2014%20Plus%20-%202022-10-13%20at%2011.28.03.png?raw=true) | ![App Screenshot](https://github.com/prathyushp1/Flutter-Dom-News-app/blob/main/screenshots/Simulator%20Screen%20Shot%20-%20iPhone%2014%20Plus%20-%202022-10-13%20at%2011.28.03.png?raw=true)|
+| Pipe     | \|        |
+
+![App Screenshot](https://github.com/prathyushp1/Flutter-Dom-News-app/blob/main/screenshots/Simulator%20Screen%20Shot%20-%20iPhone%2014%20Plus%20-%202022-10-13%20at%2011.28.03.png?raw=true)
+
+![App Screenshot](https://github.com/prathyushp1/Flutter-Dom-News-app/blob/main/screenshots/Simulator%20Screen%20Shot%20-%20iPhone%2014%20Plus%20-%202022-10-13%20at%2011.28.06.png?raw=true)
+
+![App Screenshot](https://github.com/prathyushp1/Flutter-Dom-News-app/blob/main/screenshots/Simulator%20Screen%20Shot%20-%20iPhone%2014%20Plus%20-%202022-10-13%20at%2011.28.11_3_11.png?raw=true)
+
+![App Screenshot](https://github.com/prathyushp1/Flutter-Dom-News-app/blob/main/screenshots/Simulator%20Screen%20Shot%20-%20iPhone%2014%20Plus%20-%202022-10-13%20at%2011.28.09_4_11.png?raw=true)
+
+![App Screenshot](https://github.com/prathyushp1/Flutter-Dom-News-app/blob/main/screenshots/Simulator%20Screen%20Shot%20-%20iPhone%2014%20Plus%20-%202022-10-13%20at%2011.28.57_1_11.png?raw=true)
